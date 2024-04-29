@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cinema Web</title>
+    <link rel="shortcut icon" href="images/s_logo.png">
+    <link rel="stylesheet" href="css/common2.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <!--건너뛰기 링크 영역 시작-->
+    <a id="skipNav" href="#contentsArea">본문바로가기</a>
+    <!--건너뛰기 링크 영역 종료-->
+    <!-- wrapper 영역 시작-->
+    <div id="wrapper">
+        <!-- 헤더영역 시작-->
+        <header id="header">
+            <h1 class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="cinema">
+                </a>
+            </h1>
+            <ul class="infoLink">
+                <li><a href="login.html">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">마이페이지</a></li>
+                <li><a href="#">고객센터</a></li>
+            </ul>
+            <nav>
+                <h2 class="hidden">메인 메뉴</h2>
+                <ul class="mainMenu">
+                    <li><a href="#">영화</a>
+                        <ul class="movie">
+                            <li><a href="#">전체영화</a></li>
+                            <li><a href="#">현재 상영작</a></li>
+                            <li><a href="#">상영 예정작</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">극장</a>
+                        <ul class="cinema">
+                            <li><a href="#">전체극장</a></li>
+                            <li><a href="#">특별관</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">예매</a>
+                        <ul class="ticket">
+                            <li><a href="#">예매하기</a></li>
+                            <li><a href="#">상영시간표</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">스토어</a>
+                        <ul class="store">
+                            <li><a href="#">팝콘/음료</a></li>
+                            <li><a href="#">영화관람권</a></li>
+                            <li><a href="#">기프트카드</a></li>
+                            <li><a href="#">굿즈</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">이벤트</a>
+                        <ul class="event">
+                            <li><a href="#">진행중인 이벤트</a></li>
+                            <li><a href="#">종료된 이벤트</a></li>
+                            <li><a href="#">이벤트 당첨자</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">혜택</a>
+                        <ul class="benefit">
+                            <li><a href="#">멤버쉽</a></li>
+                            <li><a href="#">제휴/할인</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <section class="search">
+                <h2 class="hidden">영화 검색</h2>
+                <form action="search.jsp" method="get" id="searchForm">
+                    <fieldset>
+                        <legend>검색 폼</legend>
+                        <!--<label for="keyword"></label>-->
+                        <input type="search" id="keyword" name="keyword">
+                        <button type="submit"></button>
+                    </fieldset>
+                </form>
+            </section>
+        </header>
+        <!-- 헤더영역 종료-->
+
+        <!-- 콘텐츠 영역 시작-->
+        <div id="contentsArea">
+            <!-- 로그인 영역 시작 -->
+            <div id="userfulArea">
+                <section class="login">
+                    <h2>로그인</h2>
+                    <form action="login.jsp" method="post" id="loginForm">
+                        <legend>회원 로그인 폼</legend>
+                        <p>
+                            <label for="userId">아이디</label>
+                            <input type="text" id="userId" name="userId" placeholder="아이디를 입력해주세요" required>
+                        </p>
+                        <p>
+                            <label for="userPw">비밀번호</label>
+                            <input type="password" id="userPw" name="userPw" placeholder="비밀번호를 입력해주세요" required>
+                        </p>
+                        <p>
+                            <button type="submit">로그인</button>
+                        </p>
+                    </form>
+                    <div class="memberLink">
+                        <a href="#" class="join">회원가입</a>
+                        <a href="#" class="find">아이디/비밀번호 찾기</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <!-- 콘텐츠 영역 종료-->
+
+    <!-- 푸터 영역 시작-->
+    <footer id="footer">
+        <div id = "footerInner">
+            <a href="#" class="footerLogo">
+                <img src="images/logo2.png" alt="Movie">
+            </a>
+            <section class="guide">
+                <ul>
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">이메일무단수집거부</a></li>
+                    <li><a href="#">광고/임대문의</a></li>
+                    <li><a href="#">채용정보</a></li>
+                    <li><a href="#">법적고지</a></li>
+                    <li><a href="#">윤리경영</a></li>
+                </ul>
+            </section>
+            <address>
+                <span>서울시 서초구 서초동 1391 대동빌딩</span>
+                <span>대표 이메일 kingmail@cinema.co.kr</span>
+                <span>고객센터</span>
+                <span>사업자등록번호</span>
+                <span>통신판매업자신고번호</span>
+                <br>
+                <span>대표이사 김철수</span>
+                <span>개인정보보호 책임자 이영희</span>
+            </address>
+            <p class="copyright">Copyright since &copy; Cinema. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <!-- 푸터 영역 종료-->
+
+    </div>
+    <!-- wrapper 영역 종료 -->
+    
+</body>
+</html>

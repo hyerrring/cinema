@@ -1,0 +1,361 @@
+@charset "utg-8";
+/* 비주얼 영역 시작 */
+#visual {
+    height: 360px;
+    position: relative;
+}
+/*
+#visual img {
+    width: 1048px;
+    height: 360px;
+}
+#visual img:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+*/
+#visual>a>p {
+    width: 988px;
+    position: absolute;
+    top: 260px;
+    left: 45px;
+    font-family: "NanumEx", 'Times New Roman', Times, serif;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: right;
+    opacity: 0.8;
+    background-color: rgba(0,0,0,0.5);
+    color: #fffff0;
+}
+#visual>a>p:hover {
+    opacity: 0;
+}
+/* 비주얼 영역 끝 */
+/* 무비차트, 상영예정작 영역 시작 */
+.board {
+    height: 400px;
+    position: relative;
+}
+.board>section {
+    position: relative;
+}
+.board>section:target {
+    z-index: 10;
+}
+.board>section:target h2 a{
+    color: #4374D9;
+}
+
+.board h2 {
+    margin-left: 20px;
+    float: left;
+    font-size: 2.2em;
+    font-weight: bold;
+}
+.board h2 a {
+    display: inline-block;
+    padding: 6px 25px;
+    color: #eee;
+    font-family: "NanumEX";
+}
+.board #chart h2 a {
+    border-right: 1px solid #ccc;
+    padding-right: 50px;
+}
+/* 영화 포스터 부분 */
+.board ul {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    height: 380px;
+    display: flex;
+    flex-flow: row;
+}
+.board ul li {
+    margin-top: 30px;
+    width: 160px;
+    height: 260px;
+    margin-right: 40px;
+}
+.board section ul li img {
+    width: 160px;
+    height: 260px;
+    border-radius: 5px;
+    position: absolute;
+}
+
+.board ul>li>.caption {
+    width: 160px;
+    height: 260px;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    opacity: 1;
+    bottom: 3000px;
+    transition: all 0.001s;
+}
+.board ul>li:hover .caption {
+    opacity: 1;
+    transform: translateY(2910px);
+}
+
+.board ul a {
+    display: inline-block;
+    width: 100px;
+    height: 20px;
+    text-align: center;
+    padding-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.board ul .a1 {
+    margin: 100px 30px 0 30px;
+}
+.board ul .a2 {
+    margin: 0px 30px
+}
+
+.board ul>li .a1:hover {
+    background-color: #888;
+    color: #eee;
+    font-weight: bold;
+}
+.board ul>li .a2:hover {
+    background-color: #4374D9;
+    color: #eee;
+    font-weight: bold;
+}
+
+/* 영화 제목 */
+.board .con1 {
+    background-color: #000;
+    height: 65px;
+} 
+.board .con2 {
+    background-color: #000;
+}
+.board ul>li h3 {
+    color: #fff;
+    position: relative;
+    text-align: center;
+    margin-top: 270px;
+    padding-bottom: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.board ul>li p {
+    color: #fff;
+    position: relative;
+    text-align: center;
+    margin-top: 5px;
+}
+
+/* 전체보기 */
+.board .more {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 8px 20px;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    color: #eee;
+}
+.board .more:hover {
+    font-weight: bold;
+    background-color: #555;
+}
+
+/* 무비차트, 상영예정작 영역 끝 */
+
+/* 이벤트 영역 시작 */
+.event2 {
+    position: relative;
+    width: 1024px;
+    height: 300px;
+    margin-top: 40px;
+}
+.event2 h2 {
+    font-size: 2.0em;
+    font-weight: bold;
+    padding: 6px 30px;
+    color: #eee;
+    font-family: "NanumEX";
+}
+
+.event2 #eventDetail {
+    position: absolute;
+    top: 35px;
+    height: 280px;
+    display: flex;
+    flex-flow: row;
+    overflow: hidden;
+}
+.event2>div>a {
+    display: inline-block;
+    margin: 20px 20px 10px 30px;
+    width: 280px;
+    height: 180px;
+}
+.event2 #eventDetail>a img {
+    width: 273px;
+    height: 173px;
+    border-radius: 3px;
+    position: absolute;
+    transition: transform 0.3s;
+}
+.event2 #eventDetail>a img:hover {
+    transform: scale(1.1, 1.1);
+}
+.event2 #eventDetail>a p {
+    position: relative;
+    color: #eee;
+    margin-top: 185px;
+    padding: 5px;
+    font-size: 1.4em;
+    font-weight: bold;
+    text-shadow: 1px 1px #3163c9;
+}
+
+.event2 .more {
+    position: absolute;
+    top: 5px;
+    right: 60px;
+    padding: 8px 20px;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    color: #eee;
+}
+.event2 .more:hover {
+    font-weight: bold;
+    background-color: #555;
+}
+
+/* 이벤트 영역 끝 */
+/* 특별관 영역 시작 */
+.spImg {
+    position: relative;
+    width: 1000px;
+    height: 250px;
+    margin-top: 30px;
+}
+.spImg h2 {
+    font-size: 2.0em;
+    font-weight: bold;
+    padding: 6px 30px;
+    color: #eee;
+    font-family: "NanumEX";
+}
+
+.spImg ul {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    height: 160px;
+    display: flex;
+    flex-flow: row;
+}
+.spImg ul li {
+    margin-top: 30px;
+    width: 200px;
+    height: 150px;
+    margin-right: 20px;
+    padding-left: 20px;
+}
+.spImg img {
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+    position: absolute;
+    filter:grayscale(100%);
+}
+.spImg img:hover {
+    filter: grayscale(0);
+}
+.spImg .more {
+    position: absolute;
+    top: 10px;
+    right: 40px;
+    padding: 8px 20px;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    color: #eee;
+}
+.spImg .more:hover {
+    font-weight: bold;
+    background-color: #555;
+}
+/* 특별관 영역 끝 */
+/* 공지사항 영역 시작*/
+#notice {
+    width: 1000px;
+    height: 65px;
+    position: relative;
+}
+#notice section{
+    width: 950px;
+    height: 20px;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-radius: 5px;
+    position: absolute;
+    display: flex;
+    flex-flow: row;
+}
+#notice section h3>a {
+    font-size: 1.2em;
+    margin: 2px;
+    padding: 0 30px;
+    border-right: 1px solid #ccc;
+    color: #fff;
+}
+#notice section p>a {
+    display: inline-block;
+    font-size: 1.1em;
+    margin: 2px;
+    padding: 0 20px;
+    color: #eee;
+}
+#notice section h3>a:hover, #notice section p>a:hover {
+    color: #aaa;
+}
+/* 공지사항 영역 끝 */
+
+/* 기능 영역 시작 */
+#skillArea {
+    position: relative;
+    width: 990px;
+    height: 240px;
+    background-color: #fff;
+}
+#skillArea ul {
+    position: absolute;
+    width: 840px;
+    height: 240px;
+    margin: 35px 70px;
+    display: flex;
+    flex-flow: row;
+    overflow: hidden;
+}
+#skillArea ul>li>a {
+    display: flex;
+    flex-flow: column;
+    padding: 35px;
+}
+#skillArea ul>li img {
+    width: 100px;
+    height: 100px;
+}
+#skillArea ul>li p {
+    position: relative;
+    font-size: 1.2em;
+    margin-top: 10px;
+    text-align: center;
+    color: #212121;
+}
+#skillArea ul>li p:hover {
+    color: #4374D9;
+}
+
+
+/* 기능 영역 끝 */
